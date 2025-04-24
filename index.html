@@ -6,21 +6,21 @@
     <title>もものポートフォリオ</title>
     <style>
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f9f9f9;
             color: #333;
         }
         header {
-            background-color: #2c3e50;
+            background-color: #ffcccb;
             padding: 20px;
             text-align: center;
-            color: #ecf0f1;
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
+            color: #fff;
         }
         nav {
             text-align: center;
@@ -29,7 +29,7 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #3498db;
+            color: #ff6f61;
             font-size: 1.2em;
             cursor: pointer;
         }
@@ -42,17 +42,15 @@
             padding: 20px 0;
             text-align: center;
             display: none;
-            transition: opacity 0.5s ease-in-out;
         }
         .section img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            background-color: #ffcccb;
+            color: #fff;
             text-align: center;
             padding: 10px 0;
             position: fixed;
@@ -74,7 +72,7 @@
         <section id="about" class="section">
             <h2>自己紹介</h2>
             <img src="about.jpg" alt="自己紹介の写真">
-            <p>こんにちは、ももです。クリエイティブな活動をしています。</p>
+            <p>こんにちは、ももです。ふんわりした雰囲気で、クリエイティブな活動をしています。</p>
         </section>
         <section id="projects" class="section">
             <h2>作品紹介</h2>
@@ -95,13 +93,8 @@
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {
                 section.style.display = 'none';
-                section.style.opacity = '0';
             });
-            const activeSection = document.getElementById(sectionId);
-            activeSection.style.display = 'block';
-            setTimeout(() => {
-                activeSection.style.opacity = '1';
-            }, 10);
+            document.getElementById(sectionId).style.display = 'block';
         }
         // 初期表示
         showSection('about');
