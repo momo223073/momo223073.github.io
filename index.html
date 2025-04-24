@@ -31,6 +31,7 @@
             text-decoration: none;
             color: #ff6f61;
             font-size: 1.2em;
+            cursor: pointer;
         }
         .container {
             width: 80%;
@@ -40,6 +41,7 @@
         .section {
             padding: 20px 0;
             text-align: center;
+            display: none;
         }
         .section img {
             max-width: 100%;
@@ -62,9 +64,9 @@
         <h1>もものポートフォリオ</h1>
     </header>
     <nav>
-        <a href="#about">自己紹介</a>
-        <a href="#projects">作品紹介</a>
-        <a href="#other">その他</a>
+        <a onclick="showSection('about')">自己紹介</a>
+        <a onclick="showSection('projects')">作品紹介</a>
+        <a onclick="showSection('other')">その他</a>
     </nav>
     <div class="container">
         <section id="about" class="section">
@@ -78,14 +80,26 @@
             <p>ここでは私の作品を紹介します。様々なプロジェクトに取り組んでいます。</p>
         </section>
         <section id="other" class="section">
-            <h2>その他</h2>
+            <h2>今後</h2>
             <img src="other.jpg" alt="その他の写真">
-            <p>その他の情報や活動についてはこちらをご覧ください。</p>
+            <p>卒業制作などの今後の活動についてはこちらをご覧ください。</p>
         </section>
     </div>
     <footer>
         <p>連絡先: <a href="mailto:example@example.com">example@example.com</a></p>
     </footer>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        // 初期表示
+        showSection('about');
+    </script>
 </body>
 </html>
+
 
