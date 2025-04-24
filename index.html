@@ -4,34 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>もものポートフォリオ</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            padding: 20px;
+            text-align: center;
+            color: #ecf0f1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #3498db;
+            font-size: 1.2em;
+            }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .section {
+            padding: 20px 0;
+            text-align: center;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-in-out;
+        }
+        .section img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>もものポートフォリオ</h1>
+    </header>
+    <nav>
+        <a onclick="showSection('about')">自己紹介</a>
+        <a onclick="showSection('projects')">作品紹介</a>
+        <a onclick="showSection('other')">その他</a>
+    </nav>
     <div class="container">
-        <header class="header">
-            <h1 class="site-title">もものポートフォリオ</h1>
-            <nav class="navigation">
-                <ul>
-                    <li><button onclick="location.href='about.html'">自己紹介</button></li>
-                    <li><button onclick="location.href='works.html'">作品</button></li>
-                    <li><button onclick="location.href='future.html'">今後について</button></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="main-content">
-            <section class="hero">
-                <p class="hero-text">ようこそ、アンティークな世界へ。</p>
-                </section>
-        </main>
-
-        <footer class="footer">
-            <p>&copy; 2025 もものポートフォリオ</p>
-        </footer>
+        <section id="about" class="section">
+            <h2>自己紹介</h2>
+            <img src="about.jpg" alt="自己紹介の写真">
+            <p>こんにちは、ももです。エレガントでおしゃれな雰囲気で、クリエイティブな活動をしています。</p>
+        </section>
+        <section id="projects" class="section">
+            <h2>作品紹介</h2>
+            <img src="projects.jpg" alt="作品紹介の写真">
+            <p>ここでは私の作品を紹介します。様々なプロジェクトに取り組んでいます。</p>
+        </section>
+        <section id="other" class="section">
+            <h2>その他</h2>
+            <img src="other.jpg" alt="その他の写真">
+            <p>その他の情報や活動についてはこちらをご覧ください。</p>
+        </section>
     </div>
-    <script src="script.js"></script>
+    <footer>
+        <p>連絡先: <a href="mailto:example@example.com">example@example.com</a></p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+                section.style.opacity = '0';
+            });
+            const activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+            setTimeout(() => {
+                activeSection.style.opacity = '1';
+            }, 10);
+        }
+        // 初期表示
+        showSection('about');
+    </script>
 </body>
 </html>
-
 
 
