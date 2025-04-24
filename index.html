@@ -6,21 +6,21 @@
     <title>もものポートフォリオ</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f5f5f5;
             color: #333;
         }
         header {
-            background-color: #ffcccb;
+            background-color: #2c3e50;
             padding: 20px;
             text-align: center;
+            color: #ecf0f1;
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
-            color: #fff;
         }
         nav {
             text-align: center;
@@ -29,7 +29,7 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #ff6f61;
+            color: #3498db;
             font-size: 1.2em;
             cursor: pointer;
         }
@@ -42,15 +42,17 @@
             padding: 20px 0;
             text-align: center;
             display: none;
+            transition: opacity 0.5s ease-in-out;
         }
         .section img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         footer {
-            background-color: #ffcccb;
-            color: #fff;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
             padding: 10px 0;
             position: fixed;
@@ -69,37 +71,6 @@
         <a onclick="showSection('other')">その他</a>
     </nav>
     <div class="container">
-        <section id="about" class="section">
-            <h2>自己紹介</h2>
-            <img src="about.jpg" alt="自己紹介の写真">
-            <p>こんにちは、ももです。クリエイティブな活動をしています。</p>
-        </section>
-        <section id="projects" class="section">
-            <h2>作品紹介</h2>
-            <img src="projects.jpg" alt="作品紹介の写真">
-            <p>ここでは私の作品を紹介します。様々なプロジェクトに取り組んでいます。</p>
-        </section>
-        <section id="other" class="section">
-            <h2>今後</h2>
-            <img src="other.jpg" alt="その他の写真">
-            <p>卒業制作などの今後の活動についてはこちらをご覧ください。</p>
-        </section>
-    </div>
-    <footer>
-        <p>連絡先: <a href="mailto:example@example.com">example@example.com</a></p>
-    </footer>
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-        // 初期表示
-        showSection('about');
-    </script>
-</body>
-</html>
+        <section id="about
 
 
